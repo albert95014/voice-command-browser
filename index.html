@@ -47,8 +47,9 @@
 
 							$("a,input,button").each(function() {
 								if($(this)[0].tagName == "INPUT") {
+									console.log("GOT TO THIS INPUT");
 									if($(this)[0].val == arg) {
-										console.log("GOT TO THIS INPUT");
+										
 										$(this)[0].click();
 										
 									}
