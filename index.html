@@ -11,7 +11,7 @@
 				upgrade();
 			} else {
 				var recognition = new webkitSpeechRecognition();
-				recognition.continuous = true;
+				recognition.continuous = false;
 				recognition.interimResults = false;
 
 				recognition.onstart = function() {};
@@ -114,7 +114,7 @@
 
 <body>
 	<p>
-		<input type="text" id="command"><input type="button" value="Do something!" id="commandbutton">
+		<input type="text" id="command"><input type="button" value="THIS BUTTON STARTS RECORDING STUFF" id="commandbutton">
 	</p>
 
 	<p>
