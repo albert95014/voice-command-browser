@@ -46,7 +46,7 @@
 							var stringpieces = arg.split(/\s/);
 
 							$("a,input,button").each(function() {
-								var inputvalue = $(this)[0].val();
+								var inputvalue = $(this).val();
 
 								if($(this)[0].tagName == "INPUT") {
 									console.log("GOT TO THIS INPUT");
