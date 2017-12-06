@@ -46,10 +46,11 @@
 							var stringpieces = arg.split(/\s/);
 
 							$("a,input,button").each(function() {
+								var inputvalue = $(this)[0].val();
+
 								if($(this)[0].tagName == "INPUT") {
 									console.log("GOT TO THIS INPUT");
-									console.log($((this)[0]).val());
-									if($((this)[0]).val() == arg) {
+									if(inputvalue == arg) {
 										$(this)[0].click();
 									}
 								} else if($(this)[0].tagName == "A") {
