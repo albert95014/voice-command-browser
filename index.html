@@ -39,7 +39,7 @@
 					switch(verb) {
 						case "click":
 							// what do we do if click?
-							console.log("handling click")
+							console.log("handling click");
 
 							//console.log($("*:contains('" + arg + "')"));
 
@@ -47,9 +47,10 @@
 
 							$("a,input,button").each(function() {
 								if($(this)[0].tagName == "INPUT") {
-									// look for the text in INPUT fields
-								} else if($(this[0].tagName == "A")) {
-
+									if($(this)[0].val == arg) {
+										$(this)[0].click();
+									}
+								} else if($(this)[0].tagName == "A")) {
 
 								}
 							});
@@ -97,6 +98,10 @@
 				
 
 			})
+
+			$(".dogbutton").click(function() {
+				alert("hello!");
+			})
 		});
 	</script>
 
@@ -115,6 +120,7 @@
 
 	<p>
 		<input class="recordbutton" type="button" value="cat"><br>
+		<input class="dogbutton" type="button" value="dog"><br>
 		<a href="google.com">Google</a><br>
 		<a href="cmu.edu">CMU</a><br>
 	</p>
