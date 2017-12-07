@@ -7,6 +7,7 @@
 	<script>
 		$(document).ready(function() {
 
+			var focusedfield;
 			if (!('webkitSpeechRecognition' in window)) {
 				upgrade();
 			} else {
@@ -33,6 +34,7 @@
 				if(result) {
 					var verb = result[1];
 					var arg = result[2]
+					
 
 					console.log("verb: " + verb + ", args: " + arg);
 
@@ -60,7 +62,7 @@
 											console.log("this is input:text!");
 											$(this).val("");
 											$(this)[0].focus();
-											var focusedfield = $(this)[0];
+											focusedfield = $(this)[0];
 										};
 									}
 								} else if($(this)[0].tagName == "A") {
