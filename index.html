@@ -60,6 +60,7 @@
 											console.log("this is input:text!");
 											$(this).val("");
 											$(this)[0].focus();
+											var focusedfield = $(this);
 										};
 									}
 								} else if($(this)[0].tagName == "A") {
@@ -83,6 +84,7 @@
 							break;
 						case "enter":
 							// what do we do on enter?
+							focusedfield.val(result);
 							console.log("handling enter")
 							break;
 						default:
