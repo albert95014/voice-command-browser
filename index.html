@@ -90,7 +90,7 @@
 							console.log("handling enter")
 							break;
 						default:
-						console.log("sorry, that is not a recognized command")
+							console.log("sorry, that is not a recognized command")
 					}
 
 
@@ -102,6 +102,7 @@
 				//}
 				}
 
+					$("#recognizedspeechbox").val(final_transcript);
 					console.log(final_transcript);
 					console.log("results" + event.results[0][0].transcript);
 				};
@@ -135,6 +136,11 @@
 		body {
 			height: 2500px;
 		}
+
+		#recognizedspeech {
+			position: fixed;
+				bottom: 10px;
+		}
 	</style>
 </head>
 
@@ -149,5 +155,10 @@
 		<a href="http://www.google.com">Google</a><br>
 		<a href="http://www.cmu.edu">CMU</a><br>
 	</p>
+
+	<div id="recognizedspeech">
+		<p>Recognized Speech</p>
+		<input type="text" id="recognizedspeechbox" value="recognized speech here">
+	</div>
 </body>
 </html>
