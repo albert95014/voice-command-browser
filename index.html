@@ -53,11 +53,12 @@
 									console.log("GOT TO THIS INPUT");
 									if(inputvalue == arg) {
 										if ($(this).is("input[type='button']")) {
-											console.log("successbutton!");
+											console.log("this is input:button!");
 											
 											$(this)[0].click();
 										} else if ($(this).is("input[type='text'],textarea")) {
-											console.log("successtext!");
+											console.log("this is input:text!");
+											$(this).val() = "";
 											$(this)[0].focus();
 										};
 									}
