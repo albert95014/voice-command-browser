@@ -72,6 +72,13 @@
 							break;
 						case "scroll":
 							// what do we do on scroll?
+							var scrollheight = $(window).scrollTop();  //your current y position on the page
+
+							if (arg == "down") {
+								$(window).scrollTop(scrollheight+150);
+							} else if (arg == "up") {
+								$(window).scrollTop(scrollheight-150);
+							}
 							console.log("handling scroll")
 							break;
 						case "enter":
