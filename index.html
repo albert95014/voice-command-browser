@@ -52,7 +52,13 @@
 								if($(this)[0].tagName == "INPUT") {
 									console.log("GOT TO THIS INPUT");
 									if(inputvalue == arg) {
-										$(this)[0].click();
+										if ($(this)[0] = $("input:button")) {
+											console.log("successbutton!");
+											$(this)[0].click();
+										} else if ($(this)[0] = $("input:text")) {
+											console.log("successtext!");
+											$(this)[0].focus();
+										}
 									}
 								} else if($(this)[0].tagName == "A") {
 									if (inputlink == arg)
